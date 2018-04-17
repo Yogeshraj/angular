@@ -1,0 +1,17 @@
+<div class="container">
+
+<div class="content-area">
+  <div class="col-6">
+    <p>Enter text here</p>
+    <form>
+      <input type="text" placeholder="enter your text here" name="text" class="text-area" [(ngModel)]="goalText">
+        <input type="submit" value="{{btnText}}" name="submit" class="submit" (click)="addItem()">
+    </form>
+  </div>
+  <div class="col-6">
+    <p>Text you entered ({{ itemCount }}) </p>
+    <h2 class="new" *ngFor="let goal of goals; let i = index"  (click)="removeItem(i)">{{goal}}</h2>
+  </div>
+</div>
+
+</div>
